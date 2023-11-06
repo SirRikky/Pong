@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx7b3uo7bve0v"]
+[gd_scene load_steps=5 format=3 uid="uid://dx7b3uo7bve0v"]
 
 [ext_resource type="PackedScene" uid="uid://xw1csi1x2ji2" path="res://scenes/wall.tscn" id="1_nor26"]
 [ext_resource type="PackedScene" uid="uid://d0gfwxtm67vff" path="res://scenes/paddle.tscn" id="2_eqcpu"]
+[ext_resource type="Script" path="res://scenes/aipaddle.gd" id="3_lpqcj"]
+[ext_resource type="PackedScene" uid="uid://cuqc1q2s1be5m" path="res://scenes/ball.tscn" id="4_a1lfg"]
 
 [node name="main" type="Node2D"]
 
@@ -24,3 +26,6 @@ position = Vector2(-320, 0)
 
 [node name="aipaddle" parent="." instance=ExtResource("2_eqcpu")]
 position = Vector2(320, 0)
+script = ExtResource("3_lpqcj")
+
+[node name="ball" parent="." instance=ExtResource("4_a1lfg")]
