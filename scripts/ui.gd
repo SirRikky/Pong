@@ -2,7 +2,7 @@ extends CanvasLayer
 
 class_name UI
 
-@onready var player_points_label = $MarginContainer/aiPoints
+@onready var player_points_label = $MarginContainer/playerPoints
 @onready var ai_points_label = $MarginContainer/aiPoints
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +16,4 @@ func update_player_score(points: int):
 func update_ai_score(points: int):
 	ai_points_label.text = "%d" % points
 	
-
-
-
 

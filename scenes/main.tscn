@@ -34,10 +34,10 @@ paddle_speed = 20000
 ball = NodePath("../ball")
 
 [node name="aiGoal" parent="." instance=ExtResource("5_t62b1")]
-position = Vector2(-340, 0)
+position = Vector2(-328, 0)
 
 [node name="playerGoal" parent="." instance=ExtResource("5_t62b1")]
-position = Vector2(340, 0)
+position = Vector2(328, 0)
 
 [node name="Line2D" type="Line2D" parent="."]
 texture_repeat = 2

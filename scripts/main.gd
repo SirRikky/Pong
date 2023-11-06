@@ -9,13 +9,13 @@ var ai_score = 0
 @onready var ui = $ui as UI
 
 func _on_player_scored():
-	# Handles scoring for player.
+	# Handles player points
 	player_score += 1
 	ui.update_player_score(player_score)
 	reset_game_state()
 
 func _on_ai_scored():
-	# Handles scoring for AI.
+	# Handles ai points
 	ai_score += 1
 	ui.update_ai_score(ai_score)
 	reset_game_state()
@@ -26,3 +26,11 @@ func reset_game_state():
 	ball.start_ball()
 	player_paddle.start_paddle()
 	ai_paddle.start_paddle()
+
+
+
+
+
+
+
+
