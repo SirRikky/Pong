@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://sc1v2w6c8fag"]
+[gd_scene load_steps=8 format=3 uid="uid://sc1v2w6c8fag"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_i8o55"]
 [ext_resource type="PackedScene" uid="uid://xw1csi1x2ji2" path="res://scenes/wall.tscn" id="1_nor26"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/aipaddle.gd" id="3_uulax"]
 [ext_resource type="PackedScene" uid="uid://cuqc1q2s1be5m" path="res://scenes/ball.tscn" id="4_a1lfg"]
 [ext_resource type="PackedScene" uid="uid://bggns4f4nu3y1" path="res://scenes/goal.tscn" id="5_t62b1"]
+[ext_resource type="Texture2D" uid="uid://oj4w5uw73brn" path="res://art/divider3.png" id="7_0vaol"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_i8o55")
@@ -40,6 +41,13 @@ position = Vector2(-340, 0)
 
 [node name="playerGoal" parent="." instance=ExtResource("5_t62b1")]
 position = Vector2(340, 0)
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_repeat = 2
+points = PackedVector2Array(0, -170, 0, 190)
+width = 4.0
+texture = ExtResource("7_0vaol")
+texture_mode = 1
 
 [connection signal="point_scored" from="aiGoal" to="." method="_on_ai_scored"]
 [connection signal="point_scored" from="playerGoal" to="." method="_on_player_scored"]
