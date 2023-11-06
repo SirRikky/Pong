@@ -18,10 +18,13 @@ func _on_ai_scored():
 	reset_game_state()
 
 func reset_game_state():
-	ai_paddle.global_position.y = 0
 	player_paddle.global_position.y = 0
+	player_paddle.linear_velocity = Vector2.ZERO
+	
 	ai_paddle.global_position.y = 0
 	ai_paddle.linear_velocity = Vector2.ZERO
+	
+	ball.start_ball()
+	
 #	player_paddle.start_paddle()
 #	ai_paddle.start_paddle()
-	ball.start_ball()

@@ -17,5 +17,5 @@ func _physics_process(delta):
 
 #func start_paddle():
 #	# Randomises the balls direction.
-#	global_position.y = Vector2.ZERO
+#	global_position = Vector2.ZERO
 #	linear_velocity = Vector2.ZERO

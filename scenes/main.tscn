@@ -26,7 +26,6 @@ rotation_smoothing_enabled = true
 
 [node name="playerPaddle" parent="." instance=ExtResource("2_eqcpu")]
 position = Vector2(-320, 0)
-speed = 250
 
 [node name="aiPaddle" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("2_eqcpu")]
 position = Vector2(320, 0)
