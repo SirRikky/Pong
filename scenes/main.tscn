@@ -30,7 +30,7 @@ position = Vector2(-320, 0)
 [node name="aiPaddle" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("2_eqcpu")]
 position = Vector2(320, 0)
 script = ExtResource("3_uulax")
-paddle_speed = 20000
+paddle_speed = 25000
 ball = NodePath("../ball")
 
 [node name="aiGoal" parent="." instance=ExtResource("5_t62b1")]

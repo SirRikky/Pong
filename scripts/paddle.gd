@@ -2,7 +2,7 @@ extends RigidBody2D
 
 class_name Paddle
 
-@export var speed = 250
+@export var speed = 400
 
 func _ready():
 	start_paddle()

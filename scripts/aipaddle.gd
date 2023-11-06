@@ -2,7 +2,7 @@ extends RigidBody2D
 
 class_name AIPaddle
 
-@export var paddle_speed = 20000
+@export var paddle_speed = 25000
 @export var ball: Ball
 
 func _ready():
