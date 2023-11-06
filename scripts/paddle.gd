@@ -1,13 +1,8 @@
 extends RigidBody2D
 
-
+#class_name Paddle
 
 @export var speed = 250
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 
 func _physics_process(delta):
 	
@@ -20,3 +15,7 @@ func _physics_process(delta):
 
 	linear_velocity = movement * speed
 
+#func start_paddle():
+#	# Randomises the balls direction.
+#	global_position.y = Vector2.ZERO
+#	linear_velocity = Vector2.ZERO
