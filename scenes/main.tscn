@@ -24,8 +24,10 @@ rotation_smoothing_enabled = true
 [node name="paddle" parent="." instance=ExtResource("2_eqcpu")]
 position = Vector2(-320, 0)
 
-[node name="aipaddle" parent="." instance=ExtResource("2_eqcpu")]
+[node name="aipaddle" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("2_eqcpu")]
 position = Vector2(320, 0)
 script = ExtResource("3_uulax")
+paddle_speed = 35000
+ball = NodePath("../ball")
 
 [node name="ball" parent="." instance=ExtResource("4_a1lfg")]
