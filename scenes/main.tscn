@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sc1v2w6c8fag"]
+[gd_scene load_steps=9 format=3 uid="uid://sc1v2w6c8fag"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_i8o55"]
 [ext_resource type="PackedScene" uid="uid://xw1csi1x2ji2" path="res://scenes/wall.tscn" id="1_nor26"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cuqc1q2s1be5m" path="res://scenes/ball.tscn" id="4_a1lfg"]
 [ext_resource type="PackedScene" uid="uid://bggns4f4nu3y1" path="res://scenes/goal.tscn" id="5_t62b1"]
 [ext_resource type="Texture2D" uid="uid://oj4w5uw73brn" path="res://art/divider3.png" id="7_0vaol"]
+[ext_resource type="PackedScene" uid="uid://cpkfjnelo13l8" path="res://scenes/ui.tscn" id="8_gl5qo"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_i8o55")
@@ -15,11 +16,9 @@ script = ExtResource("1_i8o55")
 
 [node name="topWall" parent="walls" instance=ExtResource("1_nor26")]
 position = Vector2(0, -170)
-scale = Vector2(17, 1)
 
 [node name="bottomWall" parent="walls" instance=ExtResource("1_nor26")]
 position = Vector2(0, 190)
-scale = Vector2(17, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -34,8 +33,6 @@ script = ExtResource("3_uulax")
 paddle_speed = 20000
 ball = NodePath("../ball")
 
-[node name="ball" parent="." instance=ExtResource("4_a1lfg")]
-
 [node name="aiGoal" parent="." instance=ExtResource("5_t62b1")]
 position = Vector2(-340, 0)
 
@@ -48,6 +45,10 @@ points = PackedVector2Array(0, -170, 0, 190)
 width = 4.0
 texture = ExtResource("7_0vaol")
 texture_mode = 1
+
+[node name="ball" parent="." instance=ExtResource("4_a1lfg")]
+
+[node name="ui" parent="." instance=ExtResource("8_gl5qo")]
 
 [connection signal="point_scored" from="aiGoal" to="." method="_on_ai_scored"]
 [connection signal="point_scored" from="playerGoal" to="." method="_on_player_scored"]

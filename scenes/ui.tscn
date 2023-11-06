@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpkfjnelo13l8"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_jcirq"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_jcirq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 172.0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 32
+
+[node name="playerPoints" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="aiPoints" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
