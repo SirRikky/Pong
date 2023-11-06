@@ -10,6 +10,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	
+	# Adds movement for the players paddle.
 	var movement = Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		movement = Vector2.UP
