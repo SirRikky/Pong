@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx7b3uo7bve0v"]
+
+[ext_resource type="PackedScene" uid="uid://xw1csi1x2ji2" path="res://scenes/wall.tscn" id="1_nor26"]
+[ext_resource type="PackedScene" uid="uid://d0gfwxtm67vff" path="res://scenes/paddle.tscn" id="2_eqcpu"]
+
+[node name="main" type="Node2D"]
+
+[node name="walls" type="Node" parent="."]
+
+[node name="topWall" parent="walls" instance=ExtResource("1_nor26")]
+position = Vector2(0, -170)
+scale = Vector2(17, 1)
+
+[node name="bottomWall" parent="walls" instance=ExtResource("1_nor26")]
+position = Vector2(0, 190)
+scale = Vector2(17, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+rotation_smoothing_enabled = true
+
+[node name="paddle" parent="." instance=ExtResource("2_eqcpu")]
+position = Vector2(-320, 0)
+
+[node name="aipaddle" parent="." instance=ExtResource("2_eqcpu")]
+position = Vector2(320, 0)
