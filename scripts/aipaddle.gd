@@ -17,4 +17,5 @@ func _physics_process(delta):
 func start_paddle():
 	# Resets the paddle.
 	global_position.y = 0
+	global_position.x = 320
 	linear_velocity = Vector2.ZERO

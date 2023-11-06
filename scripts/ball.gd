@@ -6,7 +6,7 @@ class_name Ball
 @export var initial_ball_speed = 12
 var ball_speed = initial_ball_speed
 # Sped increase of 2% on a collision.
-@export var speed_multiplier = 1.02
+@export var speed_multiplier = 1.04
 
 func _ready():
 	start_ball()
