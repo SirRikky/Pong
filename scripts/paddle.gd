@@ -4,6 +4,9 @@ class_name Paddle
 
 @export var speed = 250
 
+func _ready():
+	start_paddle()
+
 func _physics_process(delta):
 	
 	# Adds movement for the players paddle.
@@ -16,6 +19,6 @@ func _physics_process(delta):
 	linear_velocity = movement * speed
 
 func start_paddle():
-	# Randomises the balls direction.
+	# Resets the paddle.
 	global_position.y = 0
 	linear_velocity = Vector2.ZERO

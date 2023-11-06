@@ -35,11 +35,11 @@ ball = NodePath("../ball")
 
 [node name="ball" parent="." instance=ExtResource("4_a1lfg")]
 
-[node name="playerGoal" parent="." instance=ExtResource("5_t62b1")]
+[node name="aiGoal" parent="." instance=ExtResource("5_t62b1")]
 position = Vector2(-340, 0)
 
-[node name="aiGoal" parent="." instance=ExtResource("5_t62b1")]
+[node name="playerGoal" parent="." instance=ExtResource("5_t62b1")]
 position = Vector2(340, 0)
 
-[connection signal="point_scored" from="playerGoal" to="." method="_on_player_scored"]
 [connection signal="point_scored" from="aiGoal" to="." method="_on_ai_scored"]
+[connection signal="point_scored" from="playerGoal" to="." method="_on_player_scored"]

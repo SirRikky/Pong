@@ -10,7 +10,6 @@ var ball_speed = initial_ball_speed
 
 func _ready():
 	start_ball()
-	
 
 func _physics_process(delta):
 	# Detects a collision.
@@ -19,7 +18,6 @@ func _physics_process(delta):
 	# Makes the ball bounce of an entity it collides with.
 	if(collision):
 		velocity = velocity.bounce(collision.get_normal()) * speed_multiplier
-
 
 func start_ball():
 	# Randomises the balls direction.
