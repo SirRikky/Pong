@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-#class_name Paddle
+class_name Paddle
 
 @export var speed = 250
 
@@ -15,7 +15,7 @@ func _physics_process(delta):
 
 	linear_velocity = movement * speed
 
-#func start_paddle():
-#	# Randomises the balls direction.
-#	global_position = Vector2.ZERO
-#	linear_velocity = Vector2.ZERO
+func start_paddle():
+	# Randomises the balls direction.
+	global_position.y = 0
+	linear_velocity = Vector2.ZERO
